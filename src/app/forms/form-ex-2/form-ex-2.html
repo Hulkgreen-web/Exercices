@@ -1,0 +1,23 @@
+<h3>Exercice 2</h3>
+
+<form [formGroup]="form" #formElement="ngForm">
+  <div>
+    <label>
+      First name
+    </label>
+    <input type="text" formControlName="firstName">
+  </div>
+  <div>
+    <label>
+      Last name
+    </label>
+    <input type="text" formControlName="lastName">
+    <input type="submit" [disabled]="form.invalid">
+  </div>
+  <div>
+  </div>
+</form>
+
+@if (formElement.submitted){
+  <div [innerHTML]="form.value.firstName + ' ' + form.value.lastName"></div>
+}

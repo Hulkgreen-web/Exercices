@@ -1,0 +1,15 @@
+<h1>Exercice 6</h1>
+<table>
+  @for (number of numbers; track number) {
+    <td>
+      {{ number }}
+    </td>
+  }
+</table>
+
+<input type="number"
+       [(ngModel)]="numberToDelete">
+
+<button (click)="deleteNumber()">
+  ❌
+</button>

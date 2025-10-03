@@ -1,0 +1,15 @@
+<h1>Exercice 5</h1>
+<table>
+  <th>Name</th>
+  <th>Price</th>
+  <th>isPowerful</th>
+
+  @for (computer of _computers; track computer) {
+    <!--<tr [ngClass]="{'row-even' : $even, 'row-odd': $odd}"> -->
+    <tr>
+      <td>{{ computer.name }}</td>
+      <td>{{ computer.price }}</td>
+      <td><input type="checkbox" [checked]="computer.isPowerful" disabled></td>
+    </tr>
+  }
+</table>

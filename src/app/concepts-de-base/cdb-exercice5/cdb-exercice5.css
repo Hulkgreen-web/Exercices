@@ -1,0 +1,28 @@
+table {
+  border: 1px solid black;
+
+}
+
+th {
+  border: 1px solid black;
+}
+
+td {
+  border: 1px solid black;
+}
+
+.row-even {
+  background-color: gainsboro;
+}
+
+.row-odd {
+  background-color: ghostwhite;
+}
+
+tr:nth-child(even) {
+  background-color: gainsboro;
+}
+
+tr:nth-child(odd) {
+  background-color: ghostwhite;
+}

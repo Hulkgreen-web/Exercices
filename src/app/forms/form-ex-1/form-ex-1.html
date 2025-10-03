@@ -1,0 +1,29 @@
+<h3>Exercice 1</h3>
+
+<form #form = "ngForm" (submit)="getValues()">
+  <div>
+    <label>
+      First name
+    </label>
+    <input type="text" name="first-name" [(ngModel)]="user.firstName"
+    required #firstName="ngModel">
+  </div>
+  <div>
+    <label>
+      Last name
+    </label>
+    <input type="text" name="last-name" [(ngModel)]="user.lastName"
+    required #lastName="ngModel">
+    <input type="submit" [disabled]="form.invalid">
+  </div>
+  <div>
+    @if (firstName.touched && firstName.invalid || lastName.touched && lastName.invalid){
+      <span>All the inputs are required</span>
+    }
+
+    @if (form.submitted){
+      <p [textContent]="user.firstName"></p>
+      <p [textContent]="user.lastName"></p>
+    }
+  </div>
+</form>

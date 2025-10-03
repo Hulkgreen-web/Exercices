@@ -1,0 +1,59 @@
+<h3>Exercice 3</h3>
+
+<form [formGroup]="form" (submit)="log()">
+  <fieldset formGroupName="generalInfoForm">
+    <legend>General info</legend>
+    <div>
+      <label>Pseudo : </label>
+      <input type="text" formControlName="pseudo" (dblclick)="autocomplete()">
+    </div>
+    <div>
+      <label>Password : </label>
+      <input type="password" formControlName="password">
+    </div>
+    <div>
+      <label>Email : </label>
+      <input type="email" formControlName="email">
+    </div>
+    <div>
+      <label>Birthdate : </label>
+      <input type="text" formControlName="birthDate">
+    </div>
+  </fieldset>
+  <fieldset formGroupName="otherInfoForm">
+    <legend>Other info</legend>
+    <div>
+      <label>Do you want to continue this course ? </label>
+      <input type="checkbox" formControlName="continueCourse">
+    </div>
+    <div>
+      Angular knowledge :
+      <label>
+        From school : <input type="radio" name="angularKnowledge" value="school" formControlName="angularKnowledge">
+      </label>
+      <label>
+        Self learning : <input type="radio" name="angularKnowledge" value="self-learning"
+                               formControlName="angularKnowledge">
+      </label>
+      <label>
+        Both : <input type="radio" name="angularKnowledge" value="both" formControlName="angularKnowledge">
+      </label>
+    </div>
+    <div>
+      <label>Rating : </label>
+      <select formControlName="rating">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+      </select>
+    </div>
+  </fieldset>
+  <input type="submit" [disabled]="form.invalid">
+</form>

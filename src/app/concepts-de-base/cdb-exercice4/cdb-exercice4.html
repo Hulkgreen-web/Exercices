@@ -1,0 +1,8 @@
+<h1>Exercice 4</h1>
+
+<input type="text"
+        [(ngModel)]="inputValeur">
+
+<p [ngClass]="{'detecte' : is('even')}">Pair</p>
+<p [ngClass]="{'detecte' : is('odd')}">Impair</p>
+<p [ngClass]="{'detecte' : is('NaN')}">NaN</p>
