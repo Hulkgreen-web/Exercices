@@ -1,0 +1,5 @@
+<input type="text" name="nameEntered" [(ngModel)]="name">
+
+<input type="button" value="Add" (click)="addToList()">
+
+<app-get-names [names]="namesToTransfer"></app-get-names>

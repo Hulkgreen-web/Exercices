@@ -1,0 +1,21 @@
+#blue{
+  background-color: blue;
+}
+
+#green{
+  background-color: green;
+}
+
+#yellow{
+  background-color: yellow;
+}
+
+#crimson{
+  background-color: crimson;
+}
+
+div{
+  width: 100px;
+  height: 50px;
+  margin-bottom: 10px;
+}
