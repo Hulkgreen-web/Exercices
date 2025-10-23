@@ -1,0 +1,14 @@
+<form>
+  <input type="text" name="text" [(ngModel)]="text">
+
+  <label>
+    Number <input type="radio" name="choice" value="number" [(ngModel)]="choice">
+  </label>
+
+  <label>
+    Text <input type="radio" name="choice" value="letter" [(ngModel)]="choice">
+  </label>
+</form>
+
+
+<p>{{ text | changePipe : choice}}</p>

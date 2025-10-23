@@ -5,10 +5,11 @@ import {Forms} from './forms/forms';
 import {Services} from './services/services';
 import {Communication} from './communication/communication';
 import {Signal} from './signal/signal';
+import {Pipe} from './pipe/pipe';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, ConceptsDeBase, Forms, Services, Communication, Signal],
+  imports: [RouterOutlet, ConceptsDeBase, Forms, Services, Communication, Signal, Pipe],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
