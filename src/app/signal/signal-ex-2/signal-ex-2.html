@@ -1,0 +1,14 @@
+<form #formElement="ngForm" (submit)="saveWord(word)">
+  <div>
+    <label>
+      Text : <input type="text" name="text" [(ngModel)]="word" required>
+    </label>
+  </div>
+  <input type="submit" [disabled]="formElement.invalid">
+</form>
+
+<ul>
+  @for (letterCount of stats(); track $index) {
+    <li>{{ letterCount.letter }} : {{ letterCount.count }}</li>
+  }
+</ul>
